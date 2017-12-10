@@ -1,0 +1,226 @@
+* {
+    /* Сбрасываем общие стили */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    background: #efeff4;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    line-height: 1.4em;
+}
+
+li {
+    background: #fff;
+}
+
+.container {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    background-color: #dedede;
+    padding: 0.5em 1em;
+    border-bottom: 1px solid #000;
+}
+
+.tarif {
+    border: 1px solid #b9b9b9;
+    margin: 1em 0;
+}
+
+.tarif-title {
+    background: #fff;
+    border-bottom: 1px solid #b9b9b9;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.tarif-title > h2 {
+    padding: 20px 0;
+    margin: 0 24px;
+    color: #82C12B;
+    font-weight: normal;
+}
+
+h3 {
+    color: #82C12B;
+}
+
+.tarif-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    background: #fff;
+}
+
+.info-main {
+    margin: 10px 0;
+}
+
+.sub-tarifs {
+    line-height: 1.25em;
+}
+
+.speed {
+    display: inline-block;
+    background: #cc953b;
+    padding: 0.5em;
+    padding-left: 24px;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    margin-left: -24px;
+}
+
+.prices {
+    padding: 0.5em 0;
+    font-size: 1.2em;
+}
+
+.free-options {
+    line-height: 1.25em;
+    color: #4D575D;
+}
+
+.arrow-prev, .arrow-prev-sub {
+    display: none;
+    color: #82C12B;
+}
+
+.arrow-next {
+    color: #9c9c9c;
+}
+
+.arrow-next, .arrow-prev, .arrow-prev-sub {
+    padding: 0.5em;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.arrow-next:hover, .arrow-prev:hover, .arrow-prev-sub:hover {
+    opacity: 1.0;
+}
+
+.site {
+    padding: 20px 24px;
+    border-top: 1px solid #b9b9b9;
+    background: #fff;
+}
+
+.site a {
+    color: #007AFF;
+}
+
+.tarif-months {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #9c9c9c;
+    border-bottom: 1px solid #9c9c9c;
+    margin: 1em 0;
+    padding: 1em;
+}
+
+.tarif-selected {
+    border-top: 1px solid #9c9c9c;
+    border-bottom: 1px solid #9c9c9c;
+    margin: 1em 0;
+    padding: 1em;
+    line-height: 1.5em;
+}
+
+.hidden-by-default {
+    display: none;
+}
+
+section {
+    margin-bottom: 0.5em;
+}
+
+.first {
+    color: #4d575d;
+    font-size: 1.25em;
+}
+
+.second {
+    color: #656e73;
+}
+
+.third {
+    color: #aaa;
+}
+
+button.select-tarif {
+    background: #82c12b;
+    width: 100%;
+    color: #fff;
+    border: none;
+    margin-top: 1em;
+    padding: 1em 0;
+    font-size: 1em;
+}
+
+#earth > .tarif-info > .info-main > .speed {
+    background: #70603e;
+}
+
+#water > .tarif-info > .info-main > .speed,
+#water-hd > .tarif-info > .info-main > .speed {
+    background: #0075d9;
+}
+
+#fire > .tarif-info > .info-main > .speed,
+#fire-hd > .tarif-info > .info-main > .speed {
+    background: #e74807;
+}
+
+@media screen and (min-width: 641px) {
+    .container {
+        max-width: 1023px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+
+    .tarif {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 1440px;
+    }
+
+    .tarif {
+        width: 33.3333%;
+        max-width: 440px;
+    }
+}
